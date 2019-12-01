@@ -1,8 +1,13 @@
-import networkx as nx
-import matplotlib.pyplot as plt
+import tinker
+
+def inp():
+     inpt = tinker.usrImp()
+     return inpt
 
 def parse():
-    f = open('input10.txt', 'r')
+    inpt = inp()
+#    f = open('input60.txt', 'r')
+    f = open(inpt)
     # deleting initial two lines
     f.readline()
     f.readline()
@@ -59,18 +64,4 @@ def parse():
 #    print(source)
 #    closing file.
     f.close()
-#    G = nx.Graph()
-#    for i in range(len(nodes)):
-#        G.add_node(nodes[i], pos=(x_cordinate[i], y_cordinate[i]))
-#    mat = [[0 for i in range(len(Node_1))] for j in range(len(Node_2))]
-#    for i in range(len(Node_1)):
-#        mat[i] = u,v,w = Node_1[i], Node_2[i], Bandwidth[i]
-#    #print (mat)
-#    for i in range(len(Node_1)):
-#        G.add_weighted_edges_from(mat)
-#    print("Actual Graph: ")
-#    nx.draw(G, nx.get_node_attributes(G, 'pos'), with_labels=True, node_size=400)
     return num, Node_1, Node_2, Bandwidth, source, nodes, x_cordinate, y_cordinate
-    
-# driver
-#parse()
